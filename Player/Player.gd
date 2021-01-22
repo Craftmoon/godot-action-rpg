@@ -26,7 +26,7 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
 		animationState.travel("Idle")
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta) 
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	print(velocity)
 	# Move and slide multiplies by delta by default
 	# Also, just receiving the move_and_slide return makes some weird behavior not happen anymore when coliding
