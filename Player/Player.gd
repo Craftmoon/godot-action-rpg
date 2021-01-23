@@ -10,8 +10,16 @@ enum {
 	ROLL
 }
 
+enum{
+	DOWN,
+	LEFT,
+	RIGHT,
+	UP
+}
+
 var velocity = Vector2.ZERO
 var state = MOVE
+var facingDirection = LEFT
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -20,7 +28,12 @@ onready var animationState = animationTree.get("parameters/playback")
 func _ready():
 	animationTree.active = true
 
-func _physics_process(delta):
+# _physics_process has a constant delta, and actually waits for the physics to 
+# be done before running, while _process runs as fast as possible.
+# So if you need stuff from physics, like position or etc it's better to use
+# _physics_process because with only _process you might get a position before 
+# it's actually updated.
+func _process(delta):
 	# everything that  changes overtime you need to multiply it by delta
 	# so it doesn't vary on the users' framerate
 	match state:
@@ -64,6 +77,8 @@ func attack_state(delta):
 
 func roll_state(delta):
 	animationState.travel("Roll")
+	# Need to fix this velocity to be a constant and to use the facingDirection
+	# So the player rolls even if he was previosly not moving
 	move_and_slide(velocity + velocity*0.5)
 	print("Roll!")
 
