@@ -1029,11 +1029,11 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 1, -65535, 1, 1, -65534, 1, 1, -65533, 1, 2, -65530, 1, 3, -65528, 1, 0, -65527, 1, 1, -65526, 1, 2, 65535, 1, 65536, 0, 1, 65537, 1, 1, 65541, 2, 1, 131073, 3, 1, 131074, 6, 1, 131075, 8, 1, 131072, 9, 1, 65542, 10, 1, 65538, 131071, 1, 131072, 65536, 1, 131073, 65537, 1, 131074, 65545, 1, 131072, 65546, 1, 131074, 262145, 1, 3, 262150, 1, 196611, 262152, 1, 196608, 262153, 1, 6, 262154, 1, 2, 393215, 1, 0, 327680, 1, 1, 327681, 1, 131080, 327682, 1, 2, 327689, 1, 65536, 327690, 1, 65538, 458751, 1, 131072, 393216, 1, 131073, 393217, 1, 131073, 393218, 1, 131074, 393225, 1, 131072, 393226, 1, 131074 )
 
-[node name="Bat" parent="." instance=ExtResource( 8 )]
+[node name="Bat" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 168, 56 )
 
-[node name="Bat2" parent="." instance=ExtResource( 8 )]
+[node name="Bat2" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 232, 104 )
 
-[node name="Bat3" parent="." instance=ExtResource( 8 )]
+[node name="Bat3" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 88, 112 )
