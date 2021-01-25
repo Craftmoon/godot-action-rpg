@@ -15,6 +15,7 @@ var state = CHASE
 onready var stats = $Stats
 onready var playerDetectionZone = $PlayerDetectionZone
 onready var sprite = $AnimatedSprite
+onready var hurtbox = $Hurtbox
 
 func _ready():
 	print(stats.max_health)
@@ -46,9 +47,7 @@ func _on_Hurtbox_area_entered(area):
 	# area has the knockbar_vector property or not
 	knockback = area.knockback_vector * 80
 	stats.health -= area.damage
-
-func _on_Hitbox_area_entered(area):
-	pass
+	hurtbox.create_hit_effect()
 
 func _on_Stats_no_health():
 	queue_free()
@@ -56,7 +55,7 @@ func _on_Stats_no_health():
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
 
-
+# Player chase functionality code
 func _on_PlayerDetectionZone_body_entered(body):
 	state = CHASE
 
