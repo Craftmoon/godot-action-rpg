@@ -80,6 +80,7 @@ rotation = 1.5708
 shape = SubResource( 9 )
 
 [node name="Shadow" type="Sprite" parent="."]
+show_behind_parent = true
 texture = ExtResource( 5 )
 
 [node name="Stats" parent="." instance=ExtResource( 6 )]
