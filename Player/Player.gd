@@ -24,6 +24,8 @@ onready var swordHitbox = $HitboxPivot/SwordHitbox
 onready var hurtbox = $Hurtbox
 
 func _ready():
+	# In case you want a new random seed every start of the game, uncomment randomize
+	randomize();
 	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
 	swordHitbox.knockback_vector = starting_vector
