@@ -355,7 +355,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=11]
-length = 0.5
+length = 0.4
+step = 0.07
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -363,7 +364,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.07, 0.14, 0.21, 0.28 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 55, 56, 57, 58, 59 ]
@@ -375,7 +376,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0.35 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -390,11 +391,11 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "clips": [ {
-"end_offset": 0.0,
+"end_offset": 0.0288044,
 "start_offset": 0.0,
 "stream": ExtResource( 8 )
 } ],
-"times": PoolRealArray( 0.1 )
+"times": PoolRealArray( 0.07 )
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Hurtbox/CollisionShape2D:disabled")
@@ -403,14 +404,15 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.21 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=12]
-length = 0.5
+length = 0.4
+step = 0.07
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -418,7 +420,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.07, 0.14, 0.21, 0.28 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 50, 51, 52, 53, 54 ]
@@ -430,7 +432,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0.35 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -445,11 +447,11 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "clips": [ {
-"end_offset": 0.0,
+"end_offset": 0.0281643,
 "start_offset": 0.0,
 "stream": ExtResource( 8 )
 } ],
-"times": PoolRealArray( 0.1 )
+"times": PoolRealArray( 0.07 )
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Hurtbox/CollisionShape2D:disabled")
@@ -458,14 +460,15 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.21 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=13]
-length = 0.5
+length = 0.4
+step = 0.07
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -473,7 +476,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.07, 0.14, 0.21, 0.28 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 40, 41, 42, 43, 44 ]
@@ -485,7 +488,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0.35 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -500,11 +503,11 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "clips": [ {
-"end_offset": 0.0,
+"end_offset": 0.0281643,
 "start_offset": 0.0,
 "stream": ExtResource( 8 )
 } ],
-"times": PoolRealArray( 0.1 )
+"times": PoolRealArray( 0.07 )
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Hurtbox/CollisionShape2D:disabled")
@@ -513,14 +516,15 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.21 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=14]
-length = 0.5
+length = 0.4
+step = 0.07
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -528,7 +532,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.07, 0.14, 0.21, 0.28 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 45, 46, 47, 48, 49 ]
@@ -540,7 +544,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
+"times": PoolRealArray( 0.35 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -555,11 +559,11 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "clips": [ {
-"end_offset": 0.0,
+"end_offset": 0.0230436,
 "start_offset": 0.0,
 "stream": ExtResource( 8 )
 } ],
-"times": PoolRealArray( 0.1 )
+"times": PoolRealArray( 0.07 )
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Hurtbox/CollisionShape2D:disabled")
@@ -568,7 +572,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.21 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -808,7 +812,7 @@ material = SubResource( 1 )
 position = Vector2( 0, -9 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 27
+frame = 54
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
