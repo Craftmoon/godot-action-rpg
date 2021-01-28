@@ -2,6 +2,7 @@ extends Area2D
 
 onready var HitEffect = preload("res://Effects/HitEffect.tscn")
 onready var timer = $Timer
+onready var collisionShape = $CollisionShape2D
 
 # The way the invincibility is implemented here isn't really "invincibility"
 # because you're only immune to sequential attacks of the same bat. If another
@@ -37,7 +38,7 @@ func _on_Timer_timeout():
 	self.invincible = false
 
 func _on_Hurtbox_invincibility_ended():
-	monitorable = true
+	collisionShape.set_deferred("disabled", false)
 
 func _on_Hurtbox_invincibility_started():
-	set_deferred("monitorable", false)
+	collisionShape.set_deferred("disabled", true)

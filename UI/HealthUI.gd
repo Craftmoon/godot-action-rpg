@@ -11,8 +11,8 @@ func set_hearts(value):
 	if filledHearts != null:
 		update_heart_ui(hearts)
 
-func update_heart_ui(hearts):
-	filledHearts.rect_size.x = hearts * 15
+func update_heart_ui(current_hearts):
+	filledHearts.rect_size.x = current_hearts * 15
 
 func set_max_hearts(value):
 	max_hearts = max(value,1)
@@ -24,5 +24,7 @@ func set_max_hearts(value):
 func _ready():
 	self.max_hearts = PlayerStats.max_health
 	self.hearts = PlayerStats.health
+# warning-ignore:return_value_discarded
 	PlayerStats.connect("health_changed", self, "set_hearts")
+# warning-ignore:return_value_discarded
 	PlayerStats.connect("max_health_changed", self, "set_max_hearts")

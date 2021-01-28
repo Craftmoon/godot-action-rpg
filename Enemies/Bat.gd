@@ -18,9 +18,11 @@ onready var sprite = $AnimatedSprite
 onready var hurtbox = $Hurtbox
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
+onready var animationPlayer = $AnimationPlayer
 
 func _ready():
 	state =	pick_random_state([IDLE, WANDER])
+	sprite.frame = randi() % 5
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -67,6 +69,8 @@ func _on_Hurtbox_area_entered(area):
 	knockback = area.knockback_vector * 80
 	stats.health -= area.damage
 	hurtbox.create_hit_effect()
+	hurtbox.start_invincibility(0.3)
+	
 
 func pick_random_state(state_list):
 	state_list.shuffle()
@@ -79,8 +83,16 @@ func _on_Stats_no_health():
 	enemyDeathEffect.global_position = global_position
 
 # Player chase functionality code
-func _on_PlayerDetectionZone_body_entered(body):
+func _on_PlayerDetectionZone_body_entered(_body):
 	state = CHASE
 
-func _on_PlayerDetectionZone_body_exited(body):
+func _on_PlayerDetectionZone_body_exited(_body):
 	state = IDLE
+
+
+func _on_Hurtbox_invincibility_started():
+	animationPlayer.play("Start")
+
+
+func _on_Hurtbox_invincibility_ended():
+	animationPlayer.play("Stop")

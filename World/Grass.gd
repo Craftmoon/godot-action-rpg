@@ -11,6 +11,6 @@ func scatter():
 	# Set the grass effect scene in the current grass position
 	grassEffect.global_position = global_position
 
-func _on_Hurtbox_area_entered(area):
+func _on_Hurtbox_area_entered(_area):
 	scatter()
 	queue_free()
